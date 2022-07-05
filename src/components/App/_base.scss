@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Exa:100,200,300,regular,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Train+One:regular&display=swap');
+
+$title: 'Train One', sans-serif;
+
+@mixin flex($jc, $ai) {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+    font-family: 'Lexend Exa', sans-serif;
+    text-transform: lowercase;
+    font-size: 20px;
+    background-color: #9999cc;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ccccff' fill-opacity='0.5'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
