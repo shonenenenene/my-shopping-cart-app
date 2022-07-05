@@ -1,10 +1,12 @@
 import "./style.scss"
 
-const Total = () => {
+const Total = ( {totalSum} ) => {
+    const { price, amount } = totalSum
+    const priceFormatter = new Intl.NumberFormat()
     return (
         <div className="cart-footer__total">
-            <div className="total-count">amount: 3</div>
-            <div className="total-price">the total cost: 1488</div>
+            <div className="total-count">amount: { amount }</div>
+            <div className="total-price">the total cost: { priceFormatter.format(price)}</div>
         </div>
     );
 }
