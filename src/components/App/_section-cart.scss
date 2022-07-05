@@ -1,0 +1,22 @@
+@import "./../App/vars";
+@import "./../App/base";
+@import "./../App/reset";
+
+.section-cart {
+    .title-1 {
+        margin-top: 50px;
+        font-family: $title;
+        font-size: 70px;
+        font-weight: lighter;
+        margin-left: 6vw;
+        img {
+            display: inline-block;
+            max-width: 150px;
+            margin-left: 30px;
+        }
+    }
+    .section-cart__body {
+        margin-top: 70px;
+    }
+    padding-bottom: 30px;
+}

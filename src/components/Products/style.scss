@@ -1,0 +1,29 @@
+@import "./../App/vars";
+@import "./../App/base";
+@import "./../App/reset";
+
+.products {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        border-top: 1px solid;
+        & > * {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .product__img {
+            max-width: 100%;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(60px, auto);
+            column-gap: 15px;
+            row-gap: 10px;
+        }
+    }
+
+}

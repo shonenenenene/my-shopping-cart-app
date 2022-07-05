@@ -1,0 +1,23 @@
+@import "./../App/vars";
+@import "./../App/base";
+@import "./../App/reset";
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    min-height: 100px;
+    font-size: 40px;
+    .cart-header__title {
+        grid-column-start: 2;
+    }
+    div {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    @media (max-width: $mobile) {
+        display: none;
+    }
+
+}
