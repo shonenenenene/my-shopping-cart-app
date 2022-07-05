@@ -1,0 +1,17 @@
+@import "./../CartFooter/style.scss";
+
+.cart-footer__total {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding: 30px 0 30px 0;
+    border-top: 3px solid;
+    .total-price {
+        grid-column-start: 4;
+    }
+    & > * {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
