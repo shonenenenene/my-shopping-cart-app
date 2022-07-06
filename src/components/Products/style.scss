@@ -15,6 +15,15 @@
             margin-top: auto;
             margin-bottom: auto;
         }
+        .prod-discount {
+            text-decoration: line-through;
+            font-size: 15px;
+            color: rgb(63, 63, 63);
+            text-align: jcenter;
+        }
+        .hide {
+            display: none;
+        }
         .product__img {
             max-width: 100%;
         }

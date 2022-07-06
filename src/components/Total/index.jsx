@@ -1,6 +1,6 @@
 import "./style.scss"
 
-const Total = ( {totalSum} ) => {
+const Total = ( {totalSum, applied, setApplied} ) => {
     const { price, amount } = totalSum
     const priceFormatter = new Intl.NumberFormat()
 
@@ -8,7 +8,7 @@ const Total = ( {totalSum} ) => {
     return (
         <div className="cart-footer__total">
             <div className="total-count">amount: { amount }</div>
-            <div className="total-price">total cost without discount: { priceFormatter.format(price)} yen</div>
+            <div className={`total-price ${applied && 'applied-total'}`}>total cost: { priceFormatter.format(price)} yen</div>
         </div>
     );
 }

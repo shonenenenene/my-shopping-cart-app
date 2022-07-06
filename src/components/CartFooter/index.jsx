@@ -3,7 +3,7 @@ import Discount from '../Discount';
 import Total from '../Total';
 import "./style.scss"
 
-const CartFooter = ( { cart } ) => {
+const CartFooter = ( { cart, applied, setApplied, disc, setDisc } ) => {
 
     const [totalSum, setTotalSum] = useState( {
         price: cart.reduce( ( prev, curr ) => prev + curr.priceTotal, 0 ), 
@@ -20,8 +20,8 @@ const CartFooter = ( { cart } ) => {
 
     return (
         <footer className="cart-footer">
-            <Total totalSum={ totalSum } />
-            <Discount  totalSum={ totalSum } />
+            <Total totalSum={ totalSum } applied={applied} setApplied={ setApplied }/>
+            <Discount  totalSum={ totalSum } applied={applied} setApplied={ setApplied } disc={disc} setDisc={ setDisc } />
         </footer>
     );
 }

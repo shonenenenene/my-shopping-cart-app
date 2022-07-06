@@ -28,22 +28,25 @@ const Cart = () => {
             })
         })
     }
+    
+    const [applied, setApplied] = useState( false )
 
+    const [disc, setDisc] = useState( '' )
 
     const products = cart.map( (product) => {
-        return <Product product={product} key={product.id} deleteProduct={deleteProduct} changeCount={ changeCount } />
+        return <Product product={product} key={product.id} deleteProduct={deleteProduct} changeCount={changeCount} applied={applied}  disc={disc} setDisc={ setDisc } setApplied={ setApplied }/>
     } )
 
-    
+   
     
 
     return (    
         <section className="cart"> 
             
             <CartHeader />
-            <AddProduct />
+            <AddProduct/>
             {products}
-            <CartFooter cart={ cart }  />
+            <CartFooter cart={ cart } applied={applied} setApplied={ setApplied } disc={disc} setDisc={ setDisc } />
 
         </section>
     );

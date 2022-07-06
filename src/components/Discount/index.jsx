@@ -1,12 +1,12 @@
 import "./style.scss"
 import { useEffect, useState } from 'react';
 
-const Discount = ({totalSum}) => {
+const Discount = ({totalSum, applied, setApplied, disc, setDisc}) => {
 
     const priceFormatter = new Intl.NumberFormat()
     const { price } = totalSum
 
-    const [disc, setDisc] = useState( '' )
+    // const [disc, setDisc] = useState( '' )
     const [discDirty, setDiscDirty] = useState( false )
     const [discErr, setDiscErr] = useState( 'errs' )
     const [formValid, setFormValid] = useState( false )
@@ -38,7 +38,6 @@ const Discount = ({totalSum}) => {
     }
 
     let discPrice = Math.round(price / 100 * (100 - disc))
-    console.log( discPrice )
     
     const swap = () => {
         if ( !formValid ) {
@@ -47,7 +46,7 @@ const Discount = ({totalSum}) => {
     }
 
 
-    const [applied, setApplied] = useState( false )
+    // const [applied, setApplied] = useState( false )
 
 
     return (
