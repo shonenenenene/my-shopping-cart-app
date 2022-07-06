@@ -16,7 +16,9 @@ const AddProduct = () => {
     const [prodIdErr, setProdIdErr] = useState( 'errs' )
     const [prodPriceErr, setProdPriceErr] = useState( 'errs' )
 
-    const [formValid, setFormValid] = useState(false)
+    const [formValid, setFormValid] = useState( false )
+    
+
 
     useEffect( () => {
         if (prodTitleErr === 'errs' || prodIdErr === 'errs' || prodPriceErr === 'errs') {
@@ -70,6 +72,9 @@ const AddProduct = () => {
         }
     }
 
+
+
+
     return (
         <section className="add-product">
             <form className="add-product__form">
@@ -78,7 +83,7 @@ const AddProduct = () => {
                 <input  onChange={ e => idHandler(e)} value={prodId} onBlur={e => blurHandler(e)} className={`add-product__id ${prodIdDirty && prodIdErr}`} name="id" placeholder="paste id here" />
                 <input  onChange={ e => priceHandler(e)} value={prodPrice} onBlur={e => blurHandler(e)} className={`add-product__price ${prodPriceDirty && prodPriceErr}`} name="price" placeholder="set your price"/>
                 <div className="product__controls">
-                    <button disabled={!formValid} type="button">add</button>
+                    <button disabled={!formValid}  type="button">add</button>
                 </div>
             </form>
         </section>

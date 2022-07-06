@@ -21,7 +21,7 @@ const CartFooter = ( { cart } ) => {
     return (
         <footer className="cart-footer">
             <Total totalSum={ totalSum } />
-            <Discount />
+            <Discount  totalSum={ totalSum } />
         </footer>
     );
 }

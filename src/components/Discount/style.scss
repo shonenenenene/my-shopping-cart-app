@@ -17,6 +17,15 @@
         padding: 10px 3px 10px 3px ;
         justify-self: center;
     }
+
+    .errs {
+        &::placeholder {
+            color: rgba($color: rgb(156, 8, 8), $alpha: 0.7);
+        }
+        color: rgba($color: rgb(156, 8, 8), $alpha: 0.7);
+        border: 1px solid rgba($color: rgb(156, 8, 8), $alpha: 0.5);
+    }
+
     & > * {
         text-align: center;
         margin-top: auto;
@@ -32,6 +41,17 @@
         &:hover {
             background: rgba($color: #47478d, $alpha: 0.4);
             box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+        }
+        &:hover {
+            background: rgba($color: #5a5ab3, $alpha: 0.4);
+            box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+        }
+        &:disabled {
+            color: rgba($color: gray, $alpha: 0.8);
+            &:hover {
+                background: rgba($color: #47478d, $alpha: 0.1);
+                box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+            }
         }
     }
     }

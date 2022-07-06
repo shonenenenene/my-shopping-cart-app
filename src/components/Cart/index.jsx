@@ -29,6 +29,7 @@ const Cart = () => {
         })
     }
 
+
     const products = cart.map( (product) => {
         return <Product product={product} key={product.id} deleteProduct={deleteProduct} changeCount={ changeCount } />
     } )
@@ -40,7 +41,7 @@ const Cart = () => {
             <CartHeader />
             <AddProduct />
             {products}
-            <CartFooter cart={ cart } />
+            <CartFooter cart={ cart }  />
 
         </section>
     );
