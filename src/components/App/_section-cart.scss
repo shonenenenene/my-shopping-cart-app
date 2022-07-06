@@ -15,6 +15,9 @@
             margin-left: 30px;
         }
     }
+    .empty::after {
+        content: 'is empty :(';
+    }
     .section-cart__body {
         margin-top: 70px;
     }

@@ -1,6 +1,8 @@
 import "./style.scss"
 
 const CartHeader = () => {
+
+
     return (
         <header className="cart-header">
             <div className="cart-header__title">Title</div>

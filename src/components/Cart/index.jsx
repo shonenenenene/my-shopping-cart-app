@@ -7,9 +7,8 @@ import Product from '../Products';
 import currentCart from './../../data';
 
 
-const Cart = () => {
-    const [cart, setCart] = useState( currentCart )
-
+const Cart = ({cart, setCart}) => {
+    
     const deleteProduct = (id) => {
         setCart( ( cart ) => cart.filter((product) =>  id !== product.id))
     }
@@ -34,16 +33,15 @@ const Cart = () => {
     const [disc, setDisc] = useState( '' )
 
     const products = cart.map( (product) => {
-        return <Product product={product} key={product.id} deleteProduct={deleteProduct}  changeCount={changeCount} applied={applied}  disc={disc} setDisc={ setDisc } setApplied={ setApplied }/>
+        return <Product product={product} key={product.id} deleteProduct={deleteProduct}  changeCount={changeCount} applied={applied}  disc={disc} setDisc={ setDisc } setApplied={ setApplied } />
     } )
 
-   
     
 
     return (    
         <section className="cart"> 
             
-            <CartHeader />
+            <CartHeader/>
             <AddProduct cart={ cart } setCart={setCart}/>
             {products}
             <CartFooter cart={ cart } applied={applied} setApplied={ setApplied } disc={disc} setDisc={ setDisc } />

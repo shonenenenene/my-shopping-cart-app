@@ -1,11 +1,14 @@
+import Cart from '../Cart'
 import "./style.scss"
 
-const Product = ( { product, deleteProduct, changeCount, applied, setApplied,  disc, setDisc} ) => {
+const Product = ( { product, deleteProduct, changeCount, applied, setApplied,  disc, setDisc, cart} ) => {
     const { id, count, title, price, priceTotal } = product
     
     const priceFormatter = new Intl.NumberFormat()
 
-    let discPrice = Math.round(priceTotal / 100 * (100 - disc))
+    let discPrice = Math.round( priceTotal / 100 * ( 100 - disc ) )
+    
+
 
     return (
         <section className="products">
