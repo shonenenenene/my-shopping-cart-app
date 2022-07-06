@@ -5,7 +5,7 @@ const Product = ( { product, deleteProduct, changeCount, applied, setApplied,  d
     
     const priceFormatter = new Intl.NumberFormat()
 
-    let discPrice = Math.round(price / 100 * (100 - disc))
+    let discPrice = Math.round(priceTotal / 100 * (100 - disc))
 
     return (
         <section className="products">
