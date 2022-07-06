@@ -3,15 +3,15 @@ const currentCart = [
         id: 1,
         count: 1,
         title: 'pillow',
-        price: 9999,
-        priceTotal: 9999,
+        price: 1000,
+        priceTotal: 1000,
     },
     {
         id: 2,
         count: 1,
-        title: 'pen',
-        price: 20,
-        priceTotal: 20,
+        title: 'sword',
+        price: 20000,
+        priceTotal: 20000,
     },
     {
         id: 3,
@@ -20,20 +20,7 @@ const currentCart = [
         price: 120,
         priceTotal: 120,
     },
-    {
-        id: 4,
-        count: 1,
-        title: 'pickles',
-        price: 120,
-        priceTotal: 120,
-    },
-    {
-        id: 5,
-        count: 1,
-        title: 'pickles',
-        price: 120,
-        priceTotal: 120,
-    },
+
 ]
 
 
