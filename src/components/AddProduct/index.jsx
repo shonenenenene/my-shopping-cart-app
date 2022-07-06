@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import "./style.scss"
 
+
 const AddProduct = () => {
 
     const [prodTitle, setProdTitle] = useState( '' )
@@ -77,7 +78,7 @@ const AddProduct = () => {
                 <input  onChange={ e => idHandler(e)} value={prodId} onBlur={e => blurHandler(e)} className={`add-product__id ${prodIdDirty && prodIdErr}`} name="id" placeholder="paste id here" />
                 <input  onChange={ e => priceHandler(e)} value={prodPrice} onBlur={e => blurHandler(e)} className={`add-product__price ${prodPriceDirty && prodPriceErr}`} name="price" placeholder="set your price"/>
                 <div className="product__controls">
-                    <button disabled={!formValid} type="submit">add</button>
+                    <button disabled={!formValid} type="button">add</button>
                 </div>
             </form>
         </section>

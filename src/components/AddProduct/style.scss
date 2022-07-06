@@ -5,7 +5,7 @@
 
 .add-product__form {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     text-align: center;
     min-height: 100px;
@@ -13,13 +13,13 @@
     align-items: center;
     border-bottom: 2px solid;
     input {
-        position: relative;
         max-width: 180px;
         border: 1px solid black;
         border-radius: 10px;
         padding: 10px 3px 10px 3px ;
         justify-self: center;
     }
+
     .errs {
         &::placeholder {
             color: rgba($color: rgb(156, 8, 8), $alpha: 0.7);
@@ -42,7 +42,7 @@
                 box-shadow: 0 0 10px 5px rgb(255, 255, 255);
             }
             &:disabled {
-                color: rgb(87, 87, 87);
+                color: rgba($color: gray, $alpha: 0.8);
                 &:hover {
                     background: rgba($color: #47478d, $alpha: 0.1);
                     box-shadow: 0 0 1px 1px rgb(0, 0, 0);
@@ -55,7 +55,7 @@
         max-width: 100%;
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: 660px) {
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(60px, auto);
         column-gap: 15px;

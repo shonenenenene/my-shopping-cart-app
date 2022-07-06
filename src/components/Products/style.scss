@@ -5,10 +5,10 @@
 .products {
     .product {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns:0.5fr 0.5fr 1fr 1fr 1fr 1fr;
         column-gap: 10px;
         text-align: center;
-        padding: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
         border-top: 1px solid;
         & > * {
             text-align: center;
@@ -17,6 +17,12 @@
         }
         .product__img {
             max-width: 100%;
+        }
+        .product__count {
+            width: 50px;
+            border-radius: 5px;
+            justify-self: center;
+            text-align: center;
         }
         @media (max-width: $mobile) {
             grid-template-columns: 1fr;
