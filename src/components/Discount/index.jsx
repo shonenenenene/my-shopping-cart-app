@@ -37,14 +37,26 @@ const Discount = ({totalSum}) => {
         }
     }
 
+    let discPrice = Math.round(price / 100 * (100 - disc))
+    console.log( discPrice )
+    
+    const swap = () => {
+        if ( !formValid ) {
+            return price
+        } else return discPrice
+    }
+
+
+    const [applied, setApplied] = useState( false )
+
 
     return (
-        <form className="cart-footer__discount">
-            <input className={`discount-value ${discDirty && discErr}`} type="number" placeholder="1 to 100 %" min="1" max="100" onChange={ e => discHandler(e)} value={disc} onBlur={e => blurHandler(e)} name="disc" />
-            <button disabled={!formValid} className="apply" type="button">apply discount</button>
-            <div className="total-discount">total cost with discount: { priceFormatter.format(price)}</div>
-            <button className="cancel" type="button">
-                <img src="./img/icons/cross.svg" alt="Delete"/>
+        <form className={`cart-footer__discount ${applied && "applied"}`}>
+            <input className={`discount-value ${discDirty && discErr} ${applied && 'disabled'}`} type="number" placeholder="1 to 100 %" min="1" max="100" onChange={ e => discHandler(e)} value={!applied && disc} onBlur={e => blurHandler(e)} name="disc" />
+            <button disabled={!formValid} onClick={() => { setApplied(true) }} className={`apply ${applied && "applied-btn"}`} type="button"><span>apply discount</span></button>
+            <div className={`total-discount`}>total cost with discount: { priceFormatter.format(swap())} yen</div>
+            <button className={`cancel ${!applied && 'cancel-hidden'}`} onClick={() => { setApplied( false ) }} type="button">
+                <img src="./img/icons/cross.svg" alt="delete discount"/>
             </button>
         </form>
     );

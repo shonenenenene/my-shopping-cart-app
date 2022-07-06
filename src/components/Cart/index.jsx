@@ -33,6 +33,8 @@ const Cart = () => {
     const products = cart.map( (product) => {
         return <Product product={product} key={product.id} deleteProduct={deleteProduct} changeCount={ changeCount } />
     } )
+
+    
     
 
     return (    
