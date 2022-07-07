@@ -31,6 +31,8 @@ const AddProduct = ({cart, setCart}) => {
         setCart( ( cart ) => cart.concat( item ) )
     }
 
+
+
     useEffect( () => {
         if (prodTitleErr === 'errs' || prodIdErr === 'errs' || prodPriceErr === 'errs') {
             setFormValid(false)
@@ -83,6 +85,16 @@ const AddProduct = ({cart, setCart}) => {
         }
     }
 
+    const zeroingInputs = () => {
+        setProdTitle( '' )
+        setProdTitleErr('errs')
+        setProdId( '' )
+        setProdIdErr('errs')
+        setProdPrice( '' )
+        setProdPriceErr('errs')
+        
+    }
+
 
 
 
@@ -94,7 +106,7 @@ const AddProduct = ({cart, setCart}) => {
                 <input  onChange={ e => idHandler(e)} value={prodId} onBlur={e => blurHandler(e)} className={`add-product__id ${prodIdDirty && prodIdErr}`} name="id" placeholder="paste id here" />
                 <input  onChange={ e => priceHandler(e)} value={prodPrice} onBlur={e => blurHandler(e)} className={`add-product__price ${prodPriceDirty && prodPriceErr}`} name="price" placeholder="set your price"/>
                 <div className="product__controls">
-                    <button onClick={() => { addToCart() }} disabled={!formValid}  type="button">add</button>
+                    <button disabled={!formValid} onClick={() => { addToCart(); zeroingInputs() }} type="button">add</button>
                 </div>
             </form>
         </section>

@@ -12,10 +12,12 @@
         img {
             display: inline-block;
             max-width: 150px;
-            margin-left: 30px;
+            margin-left: 40px;
+            margin-top: 10px;
         }
     }
     .empty::after {
+        display: block;
         content: 'is empty :(';
     }
     .section-cart__body {
