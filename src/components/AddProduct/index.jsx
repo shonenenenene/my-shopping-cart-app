@@ -53,7 +53,7 @@ const AddProduct = ({cart, setCart}) => {
     const idHandler = ( e ) => {
         setProdId( e.target.value )
         const re = /^\d+$/
-        if ( !re.test( String( e.target.value ) ) || e.target.value.length > 9) {
+        if ( !re.test( String( e.target.value ) ) || e.target.value.length > 9 || cart.find(item => item.id == e.target.value)) {
             setProdIdErr('errs')
         } else {
             setProdIdErr('ok')
